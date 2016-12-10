@@ -1,0 +1,9 @@
+{
+  "name": "common",
+  "version": "0.0.1",
+  "description": " common js code",
+  "main": "index.js",
+  "repository": "git@github.com:nonlux/common",
+  "author": "nonlux <nonluxi@gmail.com>",
+  "license": "MIT"
+}
