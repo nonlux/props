@@ -7,6 +7,7 @@ module.exports = {
     mocha: true,
   },
   rules: {
+    'import/extensions': 0,
   },
   plugins: ['react', 'import', 'flowtype-errors'],
   settings: {
