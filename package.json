@@ -14,21 +14,21 @@
   },
   "betterScripts": {
     "mocha:all": {
-      "command": "mocha --require babel-polyfill --compilers js:babel-register src/**/*.spec.js test/index.js",
+      "command": "mocha --require ./src/resolve.js --require babel-polyfill --compilers js:babel-register src/**/*.spec.js test/index.js",
       "env": {
         "NODE_ENV": "test",
         "BABEL_CACHE_PATH": "./.cache/babel.json"
       }
     },
     "mocha:features": {
-      "command": "mocha --require babel-polyfill --compilers js:babel-register test/index.js",
+      "command": "mocha --require ./src/resolve.js --require babel-polyfill --compilers js:babel-register test/index.js",
       "env": {
         "NODE_ENV": "test",
         "BABEL_CACHE_PATH": "./.cache/babel.json"
       }
     },
     "mocha:spec": {
-      "command": "mocha --require babel-polyfill --compilers js:babel-register src/**/*.spec.js",
+      "command": "mocha --require ./src/resolve.js --require babel-polyfill --compilers js:babel-register src/**/*.spec.js",
       "env": {
         "NODE_ENV": "test",
         "BABEL_CACHE_PATH": "./.cache/babel.json"
@@ -63,5 +63,8 @@
     "mocha": "^3.2.0",
     "sinon": "^1.17.6",
     "yadda": "^0.22.1"
+  },
+  "dependencies": {
+    "app-module-path": "^2.1.0"
   }
 }
