@@ -8,11 +8,27 @@
   "license": "MIT",
   "scripts": {
     "fix-lint": "eslint --fix ./",
-    "mocha": "better-npm-run mocha"
+    "mocha:all": "better-npm-run mocha:all",
+    "mocha:features": "better-npm-run mocha:features",
+    "mocha:spec": "better-npm-run mocha:spec"
   },
   "betterScripts": {
-    "mocha": {
-      "command": "mocha --require babel-polyfill --compilers js:babel-register",
+    "mocha:all": {
+      "command": "mocha --require babel-polyfill --compilers js:babel-register src/**/*.spec.js test/index.js",
+      "env": {
+        "NODE_ENV": "test",
+        "BABEL_CACHE_PATH": "./.cache/babel.json"
+      }
+    },
+    "mocha:features": {
+      "command": "mocha --require babel-polyfill --compilers js:babel-register test/index.js",
+      "env": {
+        "NODE_ENV": "test",
+        "BABEL_CACHE_PATH": "./.cache/babel.json"
+      }
+    },
+    "mocha:spec": {
+      "command": "mocha --require babel-polyfill --compilers js:babel-register src/**/*.spec.js",
       "env": {
         "NODE_ENV": "test",
         "BABEL_CACHE_PATH": "./.cache/babel.json"
