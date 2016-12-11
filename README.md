@@ -9,7 +9,7 @@ Base multiplatform config for node modules and web.
 
 It include:
   - babel with new js features and flowtype.
-  - eslint for style lints 
+  - eslint for style lints
   - mocha + chail + yadda ( for full bdd testing with features and specs)
   
  ## webpack
